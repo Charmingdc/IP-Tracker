@@ -112,6 +112,7 @@ const validateInput = (e) => {
   };
 
   checkUserInput(query);
+  input.value = '';
 };
 
 const fetchLocation = (urlType) => {
