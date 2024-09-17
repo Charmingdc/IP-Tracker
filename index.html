@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <meta name="author" content="Adebayo Muis ( Charmingdc )">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+ 
+  
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+   
+   @layer base {
+     body {
+      font-family: 'Rubik', Sans-Serif;
+     }
+   }
+  </style>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+ 
+ <script src="./tailwind.js"></script>
+ 
+ <script src="./scripts.js" defer="true"></script>
+</head>
+<body class="custom-font">
+ <main class="w-screen flex flex-col items-center">
+  
+   <div class="w-[86%] m-h-16 h-auto absolute top-2 bg-white text-sm p-4 border-b-2 border-b-red-700 rounded-md hidden z-20" id="error-box">
+    
+   </div>
+   
+   <div class="w-screen h-screen flex flex-col items-center bg-white">
+    
+     <div class="w-full mim-h-[40%] h-auto flex flex-col items-center bg-[url('./images/pattern-bg-mobile.png')] md:bg-[url('./images/pattern-bg-desktop.png')] bg-cover bg-center w-full">
+      
+       <h1 class="text-white text-2xl font-bold mt-6 mb-4">
+         IP Address Tracker
+       </h1>
+       
+       <div class="w-80 h-16 flex items-center justify-between bg-white rounded-2xl mt-2 -mb-28 z-10 md:w-[40vw] md:-mb-10">
+         <input type="text" class="w-[77%] h-[90%] placeholder:text-sm ml-2 pr-2 pl-2 outline-none md:w-[84%] md:placeholder:text-base" id="input" placeholder="Seach for any IP address or domain">
+         
+         <button class="w-16 h-full flex items-center justify-center bg-black text-white text-2xl rounded-tr-2xl rounded-br-2xl hover:bg-gray-700" id="send-button">
+           <img src="./images/icon-arrow.svg" class="w-4">
+         </button>
+       </div>
+       
+      
+       <div class="w-80 h-72 flex flex-col items-center justify-evenly bg-white rounded-2xl translate-y-36 z-50 md:w-[80%] md:flex-row md:h-48 md:translate-y-24">
+    
+         
+         <div class="w-full flex flex-col items-center md:border-r border-r-gray-400">
+           <p class="text-gray-500 text-xs tracking-widest font-bold uppercase m-1">
+             Ip address
+           </p>
+           <h1 class="font-medium text-lg" id="ip">
+             loading...
+           </h1>
+         </div>
+         
+         <div class="w-full flex flex-col items-center md:border-r border-r-gray-400">
+           <p class="text-gray-500 text-xs tracking-widest font-bold uppercase m-1">
+             Location
+           </p>
+           <h1 class="font-medium text-lg" id="location">
+             loading...
+           </h1>
+         </div>
+         <div class="w-full flex flex-col items-center md:border-r border-r-gray-400">
+           <p class="text-gray-500 text-xs tracking-widest font-bold uppercase m-1">
+             Timezone
+           </p>
+           <h1 class="font-medium text-lg" id="timezone">
+             loading...
+           </h1>
+         </div>
+         <div class="w-full flex flex-col items-center">
+           <p class="text-gray-500 text-xs tracking-widest font-bold uppercase m-1">
+             Isp
+           </p>
+           <h1 class="font-medium text-lg" id="isp">
+             loading...
+           </h1>
+         </div>
+  
+       </div>
+  
+     </div>
+     
+  
+    <div class="w-screen h-[60%] bg-gray-300 z-10" id="map"></div>
+     
+   </div>
+ </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Charmingdc</a>.
+  </div>
+  
+</body>
+</html>
