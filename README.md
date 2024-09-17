@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://iptracker.vercel.app](https://iptracker.vercel.app)
+- Live Site URL: [https://ip-tracker-alpha-lyart.vercel.app/](https://ip-tracker-alpha-lyart.vercel.app/)
 
 ## My process
 
