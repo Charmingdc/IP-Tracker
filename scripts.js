@@ -11,6 +11,7 @@ let map;
 let currentMarker;
 
 const API_KEY = "at_jO89P85rZcHPSpgNtYPTAbbzDqvG3";
+// please don't use my api-key, i made this repo public so it can be useful to others
 
 
 const getDefaultLocation = () => {
@@ -162,7 +163,7 @@ const displayOnMap = (userLat, userLon) => {
 
     // Create a custom icon
     const myIcon = L.icon({
-      iconUrl: "./images/icon-location.svg",
+      iconUrl: "./icon-location.svg",
       iconSize: [42, 48], // Adjusted size
       iconAnchor: [21, 48], // Anchor the icon correctly
     });
@@ -181,7 +182,7 @@ const displayOnMap = (userLat, userLon) => {
     } else {
       // If for some reason the marker doesn't exist, create it
       const myIcon = L.icon({
-        iconUrl: "./images/icon-location.svg",
+        iconUrl: "./icon-location.svg",
         iconSize: [42, 48],
         iconAnchor: [21, 48],
       });
